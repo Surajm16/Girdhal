@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<%-- 
+    Document   : contactus
+    Created on : Mar 20, 2019, 10:55:05 PM
+    Author     : Suraj
+--%>
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
 <html>
     <head>
-        <title>Sign up</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+        
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>Feedback Form</title>
     </head>
-    <style>
+       <style>
 body {margin:0;}
 
 .navbar {
@@ -401,7 +404,7 @@ float: left;
   -webkit-filter: blur(8px);
   
   /* Full height */
-  height: 100%;
+  width: 100%;
   
   /* Center and scale the image nicely */
   background-position: center;
@@ -442,7 +445,6 @@ float: left;
      margin-bottom: 0; 
 }
 </style>
-
     <body>
    <div class="logo">
 
@@ -479,14 +481,14 @@ float: left;
 
         
     <div class="bg-image">
-        <img src="3.jpg"  width="100%">
+        <img src="3.jpg" height="100%" width="100%">
     </div>
     <div class="bg-text">
    
     
      
         
-        <form action="SignupD" method="post" align="center">
+        <form action="" method="post" align="center">
            
                 
                     
@@ -497,16 +499,13 @@ float: left;
     <div class="form-group">
         <label class="control-label col-sm-4" for="email"><div class="dc">Enter Your Name:</div></label>
       <div class="col-sm-8">
-           <input type="text" class="form-control"  placeholder="Enter Name" name="name">
+          <input type="text" class="form-control"  placeholder="Enter Name" name="name" required>
           
           
       </div>
                                          
     
-        <label class="control-label col-sm-4" for="email"> <div class="dc">Enter Your Surname:</div> </label>
-      <div class="col-sm-8">
-          <input type="text" class="form-control"  placeholder="Enter Surname" name="surname">
-            </div>
+        
          
    
       <label class="control-label col-sm-4" for="email"> <div class="dc">Email:</div> </label>
@@ -514,23 +513,18 @@ float: left;
          <input type="email" class="form-control"  placeholder="Enter email" name="mail">
          </div>
         
-         <label class="control-label col-sm-4" for="email"><div class="dc"> Enter Your Age: </div></label>
+       <label class="control-label col-sm-4" for="email"> <div class="dc">Feedback:</div> </label>
          <div class="col-sm-8">
-              <input type='text'class="form-control"  name='age' placeholder="Enter Age" required></div>
+             <input type="text" class="form-control"  placeholder="Enter Your Feedback" name="feedback">
+         </div>
                    
-              <label class="control-label col-sm-4" for="email"><div class="dc">Enter Your Password:</div> </label>
-         <div class="col-sm-8">                      
-              <input type='password'class="form-control" name='pass' placeholder="Enter Password" required></div>
-                     
-              <label class="control-label col-sm-4" for="email"><div class="dc">Confirm Your Password:</div> </label>
-         <div class="col-sm-8">                         
-             <input type='password'class="form-control"  name='cpass'  placeholder="Enter Password Again" required><br></div>
+            
              
                                 
-         <input type="submit" value='Register' class="btn btn-warning"></div></div>
+         <input type="submit" value='Submit' class="btn btn-warning"></div></div>
                              
                              </div> </form> </div>   
 
         
-        </body>
+    </body>
 </html>

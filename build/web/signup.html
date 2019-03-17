@@ -281,7 +281,7 @@ float: left;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-//#ccccb3
+
 }
 
 .topnav a:hover {
@@ -401,7 +401,7 @@ float: left;
   -webkit-filter: blur(8px);
   
   /* Full height */
-  width: 100%;
+  height: 100%;
   
   /* Center and scale the image nicely */
   background-position: center;
@@ -428,16 +428,23 @@ float: left;
 .dc{
     color:black;
 }
+.jumbotron{
+   margin-bottom: 0;
+}
+.well-lg{
+    margin-bottom: 0;
+}
 
-
+.form-group{
+   margin-bottom: 0; 
+}
+.bg-text{
+     margin-bottom: 0; 
+}
 </style>
 
     <body>
-       
-        
-    
-   
-<div class="logo">
+   <div class="logo">
 
   <a href="index.html"> <img src="L.jpg" height=7% width=9%></a>
 </div>
@@ -469,14 +476,15 @@ float: left;
   <a href="#about">About</a>
 <a href="#feedback">Feedback</a>
 </div>
-        <br><br><br><br><br>
+
+        
     <div class="bg-image">
-        <img src="3.jpg" height="100%" width="100%">
-    </div><br><br><br><br>
+        <img src="3.jpg"  width="100%">
+    </div>
     <div class="bg-text">
    
     
-       
+     
         
         <form action="SignupD" method="post" align="center">
            
@@ -516,7 +524,8 @@ float: left;
                      
               <label class="control-label col-sm-4" for="email"><div class="dc">Confirm Your Password:</div> </label>
          <div class="col-sm-8">                         
-             <input type='password'class="form-control"  name='cpass' placeholder="Enter Password Again" required><br></div>
+             <input type='password'class="form-control"  name='cpass'  placeholder="Enter Password Again" required><br></div>
+             
                                 
          <input type="submit" value='Register' class="btn btn-warning"></div></div>
                              

@@ -40,9 +40,9 @@ public class val extends HttpServlet {
     if(user.equals("admin")&& p.equals("admin"))
     {
         HttpSession session = request.getSession();
-			session.setAttribute("user", " ");
+			session.setAttribute("user", "admin");
 			//setting session to expiry in 30 mins
-			session.setMaxInactiveInterval(5*60);
+			session.setMaxInactiveInterval(1);
 			Cookie userName = new Cookie("user", user);
 			userName.setMaxAge(30*60);
 			response.addCookie(userName);

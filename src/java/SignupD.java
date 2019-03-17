@@ -45,6 +45,7 @@ public class SignupD extends HttpServlet {
         String a=request.getParameter("age");
         String p=request.getParameter("pass");
         String cp=request.getParameter("cpass");
+        
         Class.forName(dbDriver); 
         
          try (Connection con = DriverManager.getConnection(dbURL + dbName, 
@@ -79,6 +80,7 @@ if(i>0)
         } 
     
         }
+    
         
     
 
