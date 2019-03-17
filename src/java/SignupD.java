@@ -34,42 +34,47 @@ public class SignupD extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
               String dbDriver = "com.mysql.jdbc.Driver"; 
-        String dbURL = "jdbc:mysql:// localhost:3306/"; 
+        String dbURL = "jdbc:mysql://localhost:3306/"; 
         // Database name to access 
         String dbName = "girdhal"; 
         String dbUsername = "root"; 
         String dbPassword = ""; 
-  
+        String n=request.getParameter("name");
+        String sn=request.getParameter("surname");
+        String e=request.getParameter("mail");
+        String a=request.getParameter("age");
+        String p=request.getParameter("pass");
+        String cp=request.getParameter("cpass");
         Class.forName(dbDriver); 
         
          try (Connection con = DriverManager.getConnection(dbURL + dbName, 
                     dbUsername,
                     dbPassword);
-                 
+                
                  
                  //out.println("<b>Successfully Registered.</b>");
                     PreparedStatement st = con
-                            .prepareStatement("insert into girdhal.newuser values(?,?,?,?,?,?)")) {
+                            .prepareStatement("insert into newuser values(?,?,?,?,?,?)")) {
                
-                 out.println("COnnected");
+               
                 
                 
-               st.setString(1,"name" );
+               st.setString(1,n );
                 // Same for second parameter
-                st.setString(2, "surname");
-                st.setString(3, "mail");
-                st.setString(4,"age");
-                st.setString(5, "pass1");
-                st.setString(6, "pass2");
+                st.setString(2, sn);
+                st.setString(3, e);
+                st.setString(4,a);
+                st.setString(5, p);
+                st.setString(6, cp);
                 // Execute the insert command using executeUpdate()
                 // to make changes in database
-                st.executeUpdate();
-            }
+                int i=st.executeUpdate();  
+if(i>0)  
+            
            
-           
-            out.println("<html><body><b>Successfully Registered."
-                        + "</b></body></html>"); 
-        } 
+         
+            request.getRequestDispatcher("user.html").include(request, response);
+        } }
         catch (Exception e) { 
         } 
     

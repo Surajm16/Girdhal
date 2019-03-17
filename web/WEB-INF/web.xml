@@ -13,16 +13,8 @@
         <servlet-class>lo</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SignupData</servlet-name>
-        <servlet-class>SignupData</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>SignupD</servlet-name>
         <servlet-class>SignupD</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>testData</servlet-name>
-        <servlet-class>testData</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>val</servlet-name>
@@ -37,17 +29,12 @@
         <url-pattern>/lo</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>SignupData</servlet-name>
-        <url-pattern>/SignupData</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>SignupD</servlet-name>
         <url-pattern>/SignupD</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>testData</servlet-name>
-        <url-pattern>/testData</url-pattern>
-    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>register.html</welcome-file>
+    </welcome-file-list>
     <session-config>
         <session-timeout>
             1

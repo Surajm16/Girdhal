@@ -34,8 +34,8 @@ public class val extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
              //request.getRequestDispatcher("user.html").include(request, response);  
 
-    String user=request.getParameter("user");  
-    String p=request.getParameter("password");  
+    String user=request.getParameter("name");  
+    String p=request.getParameter("pass");  
           
     if(user.equals("admin")&& p.equals("admin"))
     {
