@@ -411,9 +411,11 @@ float: left;
     color:black;
 }
 .jumbotron{
+    margin-top: 0;
    margin-bottom: 0;
 }
 .well-lg{
+     margin-top: 0;
     margin-bottom: 0;
 }
 

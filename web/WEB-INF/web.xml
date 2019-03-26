@@ -5,10 +5,6 @@
         <servlet-class>val</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>valuser</servlet-name>
-        <servlet-class>valuser</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>lo</servlet-name>
         <servlet-class>lo</servlet-class>
     </servlet>
@@ -16,13 +12,13 @@
         <servlet-name>SignupD</servlet-name>
         <servlet-class>SignupD</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>feedbackD</servlet-name>
+        <servlet-class>feedbackD</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>val</servlet-name>
         <url-pattern>/val</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>valuser</servlet-name>
-        <url-pattern>/valuser</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>lo</servlet-name>
@@ -35,6 +31,10 @@
     <welcome-file-list>
         <welcome-file>register.html</welcome-file>
     </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>feedbackD</servlet-name>
+        <url-pattern>/feedbackD</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             1

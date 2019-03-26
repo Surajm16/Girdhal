@@ -488,7 +488,7 @@ float: left;
     
      
         
-        <form action="" method="post" align="center">
+        <form action="feedbackD" method="post" align="center">
            
                 
                     
@@ -503,11 +503,6 @@ float: left;
           
           
       </div>
-                                         
-    
-        
-         
-   
       <label class="control-label col-sm-4" for="email"> <div class="dc">Email:</div> </label>
          <div class="col-sm-8">
          <input type="email" class="form-control"  placeholder="Enter email" name="mail">

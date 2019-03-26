@@ -1,104 +1,57 @@
-body {margin:0;}
+<%-- 
+    Document   : Signin
+    Created on : Mar 26, 2019, 9:05:09 AM
+    Author     : Suraj
+--%>
 
-.navbar {
-  overflow: hidden;
-  background-color: #ffff99;
-  position: fixed;
-  top: 0;
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+   
+
+
+
+.bg-image {
+  /* The image used */
+  
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
   width: 100%;
-}
-.navbar a {
-  float: left;
-  display: block;
-  color: #ffff99;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.navbar a:hover {
-  background: #ffff99;
-  color: #ffff99;
-}
-
-.main {
-  padding: 16px;
-  margin-top: 30px;
-  height: 1500px; /* Used in this example to enable scrolling */
-}
-
-
-
-.box-sizing: border-box{
-    
-}
-
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 50%;
-  }
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
 }
 body {margin:0;}
 
@@ -138,7 +91,6 @@ body {margin:0;}
 {
     padding:16px;
 }
-
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -236,7 +188,6 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -373,55 +324,90 @@ float: left;
   margin-left: 75px;
   font-size: 30px;
 }
-
-.bg-image {
-  /* The image used */
-  
-  
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  
-  /* Full height */
-  width: 100%;
-  
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 90%;
-  padding: 20px;
-  text-align: center;
-}
 .dc{
     color:black;
 }
-.jumbotron{
-    margin-top: 0;
-   margin-bottom: 0;
-}
-.well-lg{
-     margin-top: 0;
-    margin-bottom: 0;
-}
 
-.form-group{
-   margin-bottom: 0; 
-}
-.bg-text{
-     margin-bottom: 0; 
-}
+</style>
+    <body>
+       <div class="logo">
+
+  <a href="index.html"> <img src="L.jpg" height=7% width=9%></a>
+</div>
+<div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+ <div class="dropdown">
+    <button class="dropbtn">Chips
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Backed</a>
+      <a href="#">Fried</a>
+      <a href="#">Crispy</a>
+    </div>
+     
+ </div>
+
+ <div class="dropdown">
+ <button class="dropbtn">Login
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="signin.html">Sign in</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="Alogin.html">Admin Login</a>
+    </div>
+  </div>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+<a href="#feedback">Feedback</a>
+</div>
+        
+    
+    
+
+    <div class="bg-image">
+        <img src="3.jpg" height="100%" width="100%">
+    </div>
+    <div class="bg-text">
+    
+  
+        <form action="cloginAuthenticate.jsp" method="post" align="center">
+
+                             <div class="jumbotron" width="100%">
+                                 <div class="well well-lg">
+                                     <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+  
+        <label class="control-label col-sm-4" for="email"><div class="dc">Enter Your Name:</div></label>
+      <div class="col-xs-4">
+           <input class="form-control" id="ex1" type="text" placeholder="Enter Username" name="mail" required>
+          
+          
+      </div>
+      <br><br>
+                                        
+      <label class="control-label col-sm-4" for="email" ><div class="dc">Enter Your Password:</div></label>
+       <div class="col-xs-4">
+           <input class="form-control" id="ex1" type="password" placeholder="Enter Password" name="pass" required>
+          
+          
+       </div>
+        <br><br>
+        
+        <input type="submit" value='Login' class="btn btn-warning">
+    </div>
+            
+        
+                                 </div>          </div>   </form></div>
+        
+    
+        
+       
+    
+
+
+
+</body>
+</html>
+   

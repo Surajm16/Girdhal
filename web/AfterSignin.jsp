@@ -1,144 +1,25 @@
-body {margin:0;}
+<%-- 
+    Document   : AfterSignin
+    Created on : Mar 26, 2019, 9:10:34 AM
+    Author     : Suraj
+--%>
 
-.navbar {
-  overflow: hidden;
-  background-color: #ffff99;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.navbar a {
-  float: left;
-  display: block;
-  color: #ffff99;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        
+<html>
+<head>
+    <title> Girdhal Food Products</title>
+   
+<link rel="icon" href="L.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css" type="text/css"/>
 
-.navbar a:hover {
-  background: #ffff99;
-  color: #ffff99;
-}
-
-.main {
-  padding: 16px;
-  margin-top: 30px;
-  height: 1500px; /* Used in this example to enable scrolling */
-}
-
-
-
-.box-sizing: border-box{
-    
-}
-
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 50%;
-  }
-}
-body {margin:0;}
-
-.navbar {
-  overflow: hidden;
-  background-color: #ffff99;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #ffff99;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background: #ffff99;
-  color: #ffff99;
-}
-
-.main {
-  padding: 16px;
-  margin-top: 30px;
-  height: 1500px; /* Used in this example to enable scrolling */
-}
-.p
-{
-    margin-top: 300px;
-}
-.container
-{
-    padding:16px;
-}
-
+<style>
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -236,7 +117,6 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -263,7 +143,6 @@ float: left;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-
 }
 
 .topnav a:hover {
@@ -374,54 +253,111 @@ float: left;
   font-size: 30px;
 }
 
-.bg-image {
-  /* The image used */
-  
-  
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  
-  /* Full height */
-  width: 100%;
-  
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+</style>
+</head>
+<body>
+<div class="logo">
+
+  <a href="index.html"> <img src="L.jpg" height=7% width=9%></a>
+</div>
+<div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+ <div class="dropdown">
+    <button class="dropbtn">Chips
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Backed</a>
+      <a href="#">Fried</a>
+      <a href="#">Crispy</a>
+    </div>
+     
+ </div>
+
+ 
+  <a href="contact.jsp">Contact</a>
+  <a href="#about">About</a>
+<a href="feedback.jsp">Feedback</a>
+<a href="index.html">Sign Out</a>
+</div>
+    
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="3.jpg" style="width:100%" height=90%>
+  <div class="text">Banana Chips</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="4.jpg" style="width:100%" height=90%>
+  <div class="text">Potato chips</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="5.jpg" style="width:100%" height=90%>
+  <div class="text">...</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-/* Position text in the middle of the page/image */
-.bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 90%;
-  padding: 20px;
-  text-align: center;
-}
-.dc{
-    color:black;
-}
-.jumbotron{
-    margin-top: 0;
-   margin-bottom: 0;
-}
-.well-lg{
-     margin-top: 0;
-    margin-bottom: 0;
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-.form-group{
-   margin-bottom: 0; 
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1;}    
+  if (n < 1) {slideIndex = slides.length;}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
-.bg-text{
-     margin-bottom: 0; 
-}
+</script>
+
+
+
+<div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> 
+  
+
+</div>
+
+
+
+
+
+
+   
+</html>

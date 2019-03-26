@@ -1,222 +1,436 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    </head>
-    <style>
-        body{
-	margin:0;
-	color:#ffff99;
-	background:#ffff99;
-	font:600 16px/18px 'Open Sans',sans-serif;
-}
-*,:after,:before{box-sizing:border-box}
-.clearfix:after,.clearfix:before{content:'';display:table}
-.clearfix:after{clear:both;display:block}
-a{color:inherit;text-decoration:none}
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+	<!--<![endif]-->
 
-.login-wrap{
-	width:100%;
-	margin:auto;
-	max-width:525px;
-	min-height:670px;
-	position:relative;
-	
-	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-}
-.login-html{
-	width:100%;
-	height:100%;
-	position:absolute;
-	padding:90px 70px 50px 70px;
-	background:#ffff99;
-}
-.login-html .sign-in-htm,
-.login-html .sign-up-htm{
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	position:absolute;
-	transform:rotateY(180deg);
-	backface-visibility:hidden;
-	transition:all .4s linear;
-}
-.login-html .sign-in,
-.login-html .sign-up,
-.login-form .group .check{
-	display:none;
-}
-.login-html .tab,
-.login-form .group .label,
-.login-form .group .button{
-	text-transform:uppercase;
-}
-.login-html .tab{
-	font-size:22px;
-	margin-right:15px;
-	padding-bottom:5px;
-	margin:0 15px 10px 0;
-	display:inline-block;
-	border-bottom:2px solid transparent;
-}
-.login-html .sign-in:checked + .tab,
-.login-html .sign-up:checked + .tab{
-	color:#fff;
-	border-color:#1161ee;
-}
-.login-form{
-	min-height:345px;
-	position:relative;
-	perspective:1000px;
-	transform-style:preserve-3d;
-}
-.login-form .group{
-	margin-bottom:15px;
-}
-.login-form .group .label,
-.login-form .group .input,
-.login-form .group .button{
-	width:100%;
-	color:#fff;
-	display:block;
-}
-.login-form .group .input,
-.login-form .group .button{
-	border:none;
-	padding:15px 20px;
-	border-radius:25px;
-	background:rgba(255,255,255,.1);
-}
-.login-form .group input[data-type="password"]{
-	text-security:circle;
-	-webkit-text-security:circle;
-}
-.login-form .group .label{
-	color:#aaa;
-	font-size:12px;
-}
-.login-form .group .button{
-	background:#1161ee;
-}
-.login-form .group label .icon{
-	width:15px;
-	height:15px;
-	border-radius:2px;
-	position:relative;
-	display:inline-block;
-	background:rgba(255,255,255,.1);
-}
-.login-form .group label .icon:before,
-.login-form .group label .icon:after{
-	content:'';
-	width:10px;
-	height:2px;
-	background:#fff;
-	position:absolute;
-	transition:all .2s ease-in-out 0s;
-}
-.login-form .group label .icon:before{
-	left:3px;
-	width:5px;
-	bottom:6px;
-	transform:scale(0) rotate(0);
-}
-.login-form .group label .icon:after{
-	top:6px;
-	right:0;
-	transform:scale(0) rotate(0);
-}
-.login-form .group .check:checked + label{
-	color:#fff;
-}
-.login-form .group .check:checked + label .icon{
-	background:#1161ee;
-}
-.login-form .group .check:checked + label .icon:before{
-	transform:scale(1) rotate(45deg);
-}
-.login-form .group .check:checked + label .icon:after{
-	transform:scale(1) rotate(-45deg);
-}
-.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
-	transform:rotate(0);
-}
-.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
-	transform:rotate(0);
-}
+	<head>
+		<meta charset="utf-8">
+		<title>The Project | Shop Product</title>
+		<meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
 
-.hr{
-	height:2px;
-	margin:60px 0 50px 0;
-	background:rgba(255,255,255,.2);
-}
-.foot-lnk{
-	text-align:center;
-}
-    </style>
-    <body>
-       <div class="login-wrap">
-	<div class="login-html">
-		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-		<div class="login-form">
-			<div class="sign-in-htm">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Fontello CSS -->
+		<link href="fonts/fontello/css/fontello.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="css/animations.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+		<link href="plugins/hover/hover-min.css" rel="stylesheet">		
+
+		<!-- the project core CSS file -->
+		<link href="css/style.css" rel="stylesheet" >
+
+		<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+		<link href="css/skins/light_blue.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="css/custom.css" rel="stylesheet">
+	</head>
+
+	<!-- body classes:  -->
+	<!-- "boxed": boxed layout mode e.g. <body class="boxed"> -->
+	<!-- "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1"> -->
+	<!-- "transparent-header": makes the header transparent and pulls the banner to top -->
+	<!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
+	<body class="no-trans   ">
+
+		<!-- scrollToTop -->
+		
+			<!-- breadcrumb end -->
+
+			<!-- main-container start -->
+			<!-- ================ -->
+			<section class="main-container">
+
+				<div class="container">
+					<div class="row">
+
+						<!-- main start -->
+						<!-- ================ -->
+						<div class="main col-md-12">
+
+							<!-- page-title start -->
+							<!-- ================ -->
+							<h1 class="page-title">Shop Product</h1>
+							<div class="separator-2"></div>
+							<!-- page-title end -->
+
+							<div class="row">
+								<div class="col-md-4">
+									<!-- pills start -->
+									<!-- ================ -->
+									<!-- Nav tabs -->
+									<ul class="nav nav-pills" role="tablist">
+										<li class="active"><a href="#pill-1" role="tab" data-toggle="tab" title="images"><i class="fa fa-camera pr-5"></i> Photo</a></li>
+										<li><a href="#pill-2" role="tab" data-toggle="tab" title="video"><i class="fa fa-video-camera pr-5"></i> Video</a></li>
+									</ul>
+									<!-- Tab panes -->
+									<div class="tab-content clear-style">
+										<div class="tab-pane active" id="pill-1">
+											<div class="owl-carousel content-slider-with-large-controls">
+												<div class="overlay-container overlay-visible">
+													<img src="images/product-1.jpg" alt="">
+													<a href="images/product-1.jpg" class="popup-img overlay-link" title="image title"><i class="icon-plus-1"></i></a>
+												</div>
+												<div class="overlay-container overlay-visible">
+													<img src="images/product-1-2.jpg" alt="">
+													<a href="images/product-1-2.jpg" class="popup-img overlay-link" title="image title"><i class="icon-plus-1"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane" id="pill-2">
+											<div class="embed-responsive embed-responsive-16by9">
+												<iframe class="embed-responsive-item" src="//player.vimeo.com/video/29198414?byline=0&amp;portrait=0"></iframe>
+												<p><a href="http://vimeo.com/29198414">Introducing Vimeo Music Store</a> from <a href="http://vimeo.com/staff">Vimeo Staff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+											</div>
+										</div>
+									</div>
+									<!-- pills end -->
+								</div>
+								<div class="col-md-8 pv-30">
+									<h2>Description</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem debitis enim facilis porro quia in voluptates praesentium, cupiditate, dolorum. Facilis minus, quidem! Id perspiciatis labore praesentium voluptatibus assumenda odio, magni.</p>
+									<h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint beatae delectus obcaecati eveniet nulla voluptate odio est laborum veniam? Natus nemo provident, voluptate molestias sint, nam dolor blanditiis minus!</p>
+									<hr class="mb-10">
+									<div class="clearfix mb-20">
+										<span>
+											<i class="fa fa-star text-default"></i>
+											<i class="fa fa-star text-default"></i>
+											<i class="fa fa-star text-default"></i>
+											<i class="fa fa-star text-default"></i>
+											<i class="fa fa-star"></i>
+										</span>
+										<a href="#" class="wishlist"><i class="fa fa-heart-o pl-10 pr-5"></i>Wishlist</a>
+										<ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
+											<li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+											<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+											<li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+										</ul>
+									</div>
+									<div class="row grid-space-10">
+										<form role="form" class="clearfix">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Quantity</label>
+													<input type="text" class="form-control" value="1">
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Color</label>
+													<select class="form-control">
+														<option>Red</option>
+														<option>White</option>
+														<option>Black</option>
+														<option>Blue</option>
+														<option>Orange</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Size</label>
+													<select class="form-control">
+														<option>5.3"</option>
+														<option>5.7"</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-12 text-right">
+												
+											</div>
+										</form>
+									</div>
+									<div class="light-gray-bg p-20 bordered clearfix">
+										<span class="product price"><i class="icon-tag pr-10"></i>$99.00</span>
+										<div class="product elements-list pull-right clearfix">
+											<input type="submit" value="Add to Cart" class="margin-clear btn btn-default">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- main end -->
+
+					</div>
 				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+			</section>
+			<!-- main-container end -->
+
+			<!-- section start -->
+			<!-- ================ -->
+			<section class="pv-30 light-gray-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs style-4" role="tablist">
+								<li class="active"><a href="#h2tab2" role="tab" data-toggle="tab"><i class="fa fa-files-o pr-5"></i>Specifications</a></li>
+								<li><a href="#h2tab3" role="tab" data-toggle="tab"><i class="fa fa-star pr-5"></i>(3) Reviews</a></li>
+							</ul>
+							<!-- Tab panes -->
+							<div class="tab-content padding-top-clear padding-bottom-clear">
+								<div class="tab-pane fade in active" id="h2tab2">
+									<h4 class="space-top">Specifications</h4>
+									<hr>
+									<dl class="dl-horizontal">
+										<dt>Consectetur</dt>
+										<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+										<dt>Culla</dt>
+										<dd>Adipisci autem illo hic itaque nulla velit quod laboriosam ipsum in illum!</dd>
+										<dt>Quas</dt>
+										<dd>Velit mollitia vel nemo, repudiandae quas nisi consectetur maiores beatae.</dd>
+										<dt>Sapiente</dt>
+										<dd>Dolor, architecto, accusamus. Explicabo, culpa hic sapiente amet libero, recusandae laudantium consequatur velit possimus ratione quo. Ipsum maxime officia quasi quos magni!</dd>
+										<dt>Dignissimos</dt>
+										<dd>Odio cum deleniti mollitia, quisquam dignissimos voluptatem, unde rem alias.</dd>
+										<dt>Adipisicing</dt>
+										<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+										<dd>Tempora rerum veritatis nam blanditiis.</dd>
+										<dt>Werspiciatis</dt>
+										<dd>Rem nostrum sit magnam debitis quidem perspiciatis fuga fugit.</dd>
+									</dl>
+									<hr>
+								</div>
+								<div class="tab-pane fade" id="h2tab3">
+									<!-- comments start -->
+									<div class="comments margin-clear space-top">
+										<!-- comment start -->
+										<div class="comment clearfix">
+											<div class="comment-avatar">
+												<img class="img-circle" src="images/avatar.jpg" alt="avatar">
+											</div>
+											<header>
+												<h3>Amazing!</h3>
+												<div class="comment-meta"> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star"></i> | Today, 12:31</div>
+											</header>
+											<div class="comment-content">
+												<div class="comment-body clearfix">
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+													<a href="blog-post.html" class="btn-sm-link link-dark pull-right"><i class="fa fa-reply"></i> Reply</a>
+												</div>
+											</div>
+										</div>
+										<!-- comment end -->
+
+										<!-- comment start -->
+										<div class="comment clearfix">
+											<div class="comment-avatar">
+												<img class="img-circle" src="images/avatar.jpg" alt="avatar">
+											</div>
+											<header>
+												<h3>Really Nice!</h3>
+												<div class="comment-meta"> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star"></i> | Today, 10:31</div>
+											</header>
+											<div class="comment-content">
+												<div class="comment-body clearfix">
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+													<a href="blog-post.html" class="btn-sm-link link-dark pull-right"><i class="fa fa-reply"></i> Reply</a>
+												</div>
+											</div>
+										</div>
+										<!-- comment end -->
+
+										<!-- comment start -->
+										<div class="comment clearfix">
+											<div class="comment-avatar">
+												<img class="img-circle" src="images/avatar.jpg" alt="avatar">
+											</div>
+											<header>
+												<h3>Worth to Buy!</h3>
+												<div class="comment-meta"> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star text-default"></i> <i class="fa fa-star"></i> | Today, 09:31</div>
+											</header>
+											<div class="comment-content">
+												<div class="comment-body clearfix">
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+													<a href="blog-post.html" class="btn-sm-link link-dark pull-right"><i class="fa fa-reply"></i> Reply</a>
+												</div>
+											</div>
+										</div>
+										<!-- comment end -->
+									</div>
+									<!-- comments end -->
+
+									<!-- comments form start -->
+									<div class="comments-form">
+										<h2 class="title">Add your Review</h2>
+										<form role="form" id="comment-form">
+											<div class="form-group has-feedback">
+												<label for="name4">Name</label>
+												<input type="text" class="form-control" id="name4" placeholder="" name="name4" required>
+												<i class="fa fa-user form-control-feedback"></i>
+											</div>
+											<div class="form-group has-feedback">
+												<label for="subject4">Subject</label>
+												<input type="text" class="form-control" id="subject4" placeholder="" name="subject4" required>
+												<i class="fa fa-pencil form-control-feedback"></i>
+											</div>
+											<div class="form-group">
+												<label>Rating</label>
+												<select class="form-control" id="review">
+													<option value="five">5</option>
+													<option value="four">4</option>
+													<option value="three">3</option>
+													<option value="two">2</option>
+													<option value="one">1</option>
+												</select>
+											</div>
+											<div class="form-group has-feedback">
+												<label for="message4">Message</label>
+												<textarea class="form-control" rows="8" id="message4" placeholder="" name="message4" required></textarea>
+												<i class="fa fa-envelope-o form-control-feedback"></i>
+											</div>
+											<input type="submit" value="Submit" class="btn btn-default">
+										</form>
+									</div>
+									<!-- comments form end -->
+								</div>
+							</div>
+						</div>
+
+						<!-- sidebar start -->
+						<!-- ================ -->
+						<aside class="col-md-4 col-lg-3 col-lg-offset-1">
+							<div class="sidebar">
+								<div class="block clearfix">
+									<h3 class="title">Related Products</h3>
+									<div class="separator-2"></div>
+									<div class="media margin-clear">
+										<div class="media-left">
+											<div class="overlay-container">
+												<img class="media-object" src="images/product-5.jpg" alt="blog-thumb">
+												<a href="shop-product.html" class="overlay-link small"><i class="fa fa-link"></i></a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h6 class="media-heading"><a href="shop-product.html">Lorem ipsum dolor sit amet</a></h6>
+											<p class="margin-clear">
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+											</p>
+											<p class="price">$99.00</p>
+										</div>
+										<hr>
+									</div>
+									<div class="media margin-clear">
+										<div class="media-left">
+											<div class="overlay-container">
+												<img class="media-object" src="images/product-6.jpg" alt="blog-thumb">
+												<a href="shop-product.html" class="overlay-link small"><i class="fa fa-link"></i></a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h6 class="media-heading"><a href="shop-product.html">Eum repudiandae ipsam</a></h6>
+											<p class="margin-clear">
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star"></i>
+											</p>
+											<p class="price">$299.00</p>
+										</div>
+										<hr>
+									</div>
+									<div class="media margin-clear">
+										<div class="media-left">
+											<div class="overlay-container">
+												<img class="media-object" src="images/product-7.jpg" alt="blog-thumb">
+												<a href="shop-product.html" class="overlay-link small"><i class="fa fa-link"></i></a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h6 class="media-heading"><a href="shop-product.html">Quia aperiam velit fuga</a></h6>
+											<p class="margin-clear">
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star"></i>
+											</p>
+											<p class="price">$9.99</p>
+										</div>
+										<hr>
+									</div>
+									<div class="media margin-clear">
+										<div class="media-left">
+											<div class="overlay-container">
+												<img class="media-object" src="images/product-8.jpg" alt="blog-thumb">
+												<a href="shop-product.html" class="overlay-link small"><i class="fa fa-link"></i></a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h6 class="media-heading"><a href="shop-product.html">Fugit non natus officiis</a></h6>
+											<p class="margin-clear">
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star text-default"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</p>
+											<p class="price">$399.00</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</aside>
+						<!-- sidebar end -->
+
+					</div>
 				</div>
-				<div class="group">
-					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span class="icon"></span> Keep me Signed in</label>
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign In">
-				</div>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<a href="#forgot">Forgot Password?</a>
-				</div>
-			</div>
-			<div class="sign-up-htm">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Repeat Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" class="input">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign Up">
-				</div>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<label for="tab-1">Already Member?</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-    </body>
+			</section>
+			<!-- section end -->
+
+			<!-- section start -->
+			<!-- ================ -->
+			<section class="section dark-translucent-bg pv-40" style="background-image:url('images/shop-banner.jpg');background-position: 50% 50%;">
+				<div class="container">
+					<div class="row grid-space-10">
+						<div class="col-md-3 col-sm-6">
+							<div class="pv-30 ph-20 feature-box text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+								<span class="icon default-bg"><i class="fa fa-diamond"></i></span>
+								<h3>Premium &amp; Guaranteed Quality</h3>
+								<div class="separator clearfix"></div>
+								<p>Voluptatem ad provident non repudiandae beatae cupiditate.</p>
+								<a href="page-services.html" class="link-dark">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="pv-30 ph-20 feature-box text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="150">
+								<span class="icon default-bg"><i class="icon-lock"></i></span>
+								<h3>Secure &amp; Safe Payment</h3>
+								<div class="separator clearfix"></div>
+								<p>Iure sequi unde hic. Sapiente quaerat sequi inventore.</p>
+								<a href="page-services.html" class="link-dark">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+
+							
+			
+	</body>
 </html>

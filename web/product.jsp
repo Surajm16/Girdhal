@@ -1,23 +1,35 @@
 <%-- 
-    Document   : contact
-    Created on : Mar 21, 2019, 12:15:05 AM
+    Document   : product
+    Created on : Mar 25, 2019, 7:51:49 PM
     Author     : Suraj
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="JavaEmail.JavaEmail;"%>
-<%@ page import="javax.mail.MessagingException;"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="main.css">
+        <title>JSP Page</title>
+          <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <title>Contact Us</title>
-        <style>
-            body {margin:0;}
+  <style>
+      .product{
+         height: 10px;
+         width:10px;
+          
+      }
+      .form-group{
+   margin-bottom: 0; 
+}
+.ex1 {
+  padding-top: 100px;
+}
+
+
+
+body {margin:0;}
 
 .navbar {
   overflow: hidden;
@@ -444,58 +456,21 @@ float: left;
 .bg-text{
      margin-bottom: 0; 
 }
-        </style>
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+img {
+  border-radius: 50%;
+}
+  </style>
     </head>
     <body>
-      
-<%
-	String message = null;
-	String status = null;
-	if (request.getParameter("submit") != null) {
-		JavaEmail javaEmail = new JavaEmail();
-		javaEmail.setMailServerProperties();
-		String emailSubject = "Contact Form using Java JSP GMail";
-		String emailBody = "";
-		if (request.getParameter("name") != null) {
-			emailBody = "Sender Name: " + request.getParameter("name")
-					+ "<br>";
-		}
-		if (request.getParameter("email") != null) {
-			emailBody = emailBody + "Sender Email: "
-					+ request.getParameter("email") + "<br>";
-		}
-		if (request.getParameter("phone") != null) {
-			emailBody = emailBody + "Sender Phone: "
-					+ request.getParameter("phone") + "<br>";
-		}
-		if (request.getParameter("message") != null) {
-			emailBody = emailBody + "Message: " + request.getParameter("message")
-					+ "<br>";
-		}
-		javaEmail.createEmailMessage(emailSubject, emailBody);
-		try {
-			javaEmail.sendEmail();
-			status = "success";
-			message = "Email sent Successfully!";
-                }
-                catch(MessagingException me) {
-			status = "error";
-			message = "Error in Sending Email!";
-		}
-                
-	}
-%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Contact Us</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel='stylesheet' href='style.css' type='text/css' media='all' />
-</head>
-<body>
-				
-                        <div class="logo">
+        
+        <div class="logo">
 
   <a href="index.html"> <img src="L.jpg" height=7% width=9%></a>
 </div>
@@ -523,69 +498,20 @@ float: left;
       <a href="Alogin.html">Admin Login</a>
     </div>
   </div>
-  <a href="#contact">Contact</a>
+  <a href="contact.jsp">Contact</a>
   <a href="#about">About</a>
-<a href="#feedback">Feedback</a>
+<a href="feedback.jsp">Feedback</a>
 </div>
-
         
-    <div class="bg-image">
-        <img src="3.jpg" height="100%" width="100%">
-    </div>
-    <div class="bg-text">
-        <h1>Contact Form</h1>
-			<p>Send your comments through this form and we will get back to
-				you.</p>
-        <div class="jumbotron" weight="100" >
-                                 <div class="well well-lg">
-                                    
-    <div class="form-group">
-			<div id="message">
-				<form id="frmContact" name="frmContact" action="" method="POST"
-					novalidate="novalidate">
-					
-                                               <label class="control-label col-sm-4" for="email"> <div class="dc">Name:</div> </label>
-                                    <div class="col-sm-8">
-					
-						<input type="text"  class="form-control"  name="name"
-							placeholder="enter your name here" title="Please enter your name"
-							class="required" aria-required="true" required>
-					</div>
-					                  <label class="control-label col-sm-4" for="email"> <div class="dc">Email:</div> </label>
-                                          <div class="col-sm-8">
-				
-						<input type="email"  class="form-control"  name="name"
-							placeholder="enter your email here" title="Please enter your email"
-						 required>
-					</div>
-                                            
-					  <label class="control-label col-sm-4" for="email"> <div class="dc">Phone:</div> </label>
-                                          <div class="col-sm-8">
-						<input type="text"  class="form-control"  name="name"
-							placeholder="enter your phone here" title="Please enter your phone"
-							class="required" aria-required="true" required>
-					</div>
-					<label class="control-label col-sm-4" for="email"> <div class="dc">Message:</div> </label>
-                                          <div class="col-sm-8">
-						<input type="text"  class="form-control"  name="name"
-							placeholder="enter your message here" title="Please enter message"
-							class="required" aria-required="true" required>
-					</div>
-					
-					<input type="submit" name="submit" value="Send Message" class="btn btn-warning"
-						 >
-					<%
-						if (null != message) {
-							out.println("<div class='" + status + "'>"
-									+ message + "</div>");
-						}
-					%>
-				</form>
-                        </div>			</div>
-		</div>
-		<!-- content -->
-        </div></div></div>
-	<!-- central -->
-
+        <div class="ex1">
+            
+        <img src="3.jpg" align="left" height="300px"
+         width="400px" class="img-rounded">
+        </div>
+        <div class="ex1">
+            <br>
+        <input type="submit" value="Add To Cart">
+        <input type="submit" value="Buy Now">
+        </div>
     </body>
 </html>
